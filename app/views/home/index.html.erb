@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <h1>Calbee</h1>
+  <p class="lead">
+    converter csv to vcf
+  </p>
+  <p>
+    <%= form_tag({action: :index, format: 'vcf'}, id: 'form', method: :post, multipart: true) do %>
+      <a href="javascript:;" class="file btn btn-lg btn-success">open csv
+        <%= file_field_tag 'file', id: 'file' %>
+      </a>
+    <% end %>
+  </p>
+
+  <p class="lead">
+  上传 csv 文件输出 vcf 格式文件，支持 iphone 导入到通讯录
+  </p>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $("#file").on('change', function() {
+    $("#form").submit();
+  })
+</script>

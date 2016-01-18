@@ -13,8 +13,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'puma'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'calbee'
 
 group :development, :test do
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'byebug'
 end
 
